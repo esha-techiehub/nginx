@@ -1,6 +1,5 @@
 ## 2. NGINX Folder Structure & Files — Simple, step-by-step for a layman
 
-Below I’ll explain each file/folder you listed in plain English, show where to look, give small examples, and include a few commands you can copy-paste to inspect things on a running Linux server.
 
 ---
 
