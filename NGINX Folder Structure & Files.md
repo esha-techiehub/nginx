@@ -239,9 +239,13 @@ sudo tail -n 50 /var/log/nginx/error.log
 - **access.log / error.log** → who visited & what went wrong
 
 .
-
 ## 📘 NGINX Folder Structure — Diagram (ASCII for README)
-# 1. High-Level NGINX Directory Structure
+
+---
+
+## 1. High-Level NGINX Directory Structure
+
+```
 /etc/nginx
 ├── nginx.conf              ← Main configuration file
 ├── mime.types              ← File type mappings
@@ -255,24 +259,36 @@ sudo tail -n 50 /var/log/nginx/error.log
 │   ├── default.conf
 │   └── security.conf
 └── snippets/               ← Small reusable config parts
+```
+
+---
 
 ## 2. Web Root Structure
+
+```
 /var/www
 └── html/                   ← Default site document root
     ├── index.html
     ├── style.css
     └── images/
         └── logo.png
+```
+
+---
 
 ## 3. Log File Location Diagram
+
+```
 /var/log/nginx/
 ├── access.log              ← All incoming requests
 └── error.log               ← Server errors, startup issues, permission errors
+```
+
+---
 
 # 🔥 Full NGINX Architecture Diagram (Beginner-Friendly)
 
-
-
+```
                               ┌──────────────────────────┐
                               │       Client Browser     │
                               │   (Chrome, Firefox...)   │
@@ -298,8 +314,13 @@ sudo tail -n 50 /var/log/nginx/error.log
   CSS/JS/Images                  / SpringBoot / PHP                (Round Robin /
                                                                     Least Conn /
                                                                     IP Hash)
+```
+
+---
 
 # 🎯 Simplified NGINX Config Flow Diagram
+
+```
 Start NGINX
      │
      ▼
@@ -312,5 +333,7 @@ Load nginx.conf
      └── Loads global settings
      ▼
 Serve traffic
+```
 
+---
 
